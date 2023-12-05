@@ -19,4 +19,12 @@ spec:
         image: ubuntu:latest
         # Just spin & wait forever
         command: [ "/bin/bash", "-c", "--" ]
-        args: [ "while true; do sleep 30; done;" ]
+        args:
+        - |
+          cntr=0
+          while true; do
+              cntr=$((cntr+1))
+              timestamp=`date --utc +"%Y-%m-%d %H:%M:%SZ"`
+              echo "[$timestamp] $cntr"
+              sleep 10
+          done
