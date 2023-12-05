@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sleep-deployment
-  namespace: sleep-app
+  namespace: flux-app
   labels:
     app: sleep
 spec:
